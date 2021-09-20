@@ -56,6 +56,9 @@ func setupOutputs(wg sync.WaitGroup, exiting chan bool) {
 		chConfig := clickHouseConfig{
 			clickhouseResultChannel,
 			outputOptions.ClickhouseAddress,
+			outputOptions.ClickhouseDatabase,
+			outputOptions.ClickhouseUsername,
+			outputOptions.ClickhousePassword,
 			outputOptions.ClickhouseBatchSize,
 			outputOptions.ClickhouseOutputType,
 			outputOptions.ClickhouseSaveFullQuery,

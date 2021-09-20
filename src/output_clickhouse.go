@@ -43,7 +43,7 @@ func connectClickhouseRetry(chConfig clickHouseConfig) clickhouse.Clickhouse {
 }
 
 func connectClickhouse(chConfig clickHouseConfig) (clickhouse.Clickhouse, error) {
-	connection, err := clickhouse.OpenDirect(fmt.Sprintf("tcp://%v?debug=%v", chConfig.clickhouseAddress, chConfig.clickhouseDebug))
+	connection, err := clickhouse.OpenDirect(fmt.Sprintf("tcp://%v?debug=%v&database=%v&username=%v&password=%v", chConfig.clickhouseAddress, chConfig.clickhouseDebug, chConfig.clickhouseDatabase, chConfig.clickhouseUsername, chConfig.ClickhousePassword))
 	if err != nil {
 		log.Error(err)
 		return nil, err
