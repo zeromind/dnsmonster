@@ -54,7 +54,7 @@ var generalOptions struct {
 
 var outputOptions struct {
 	ClickhouseAddress       string         `long:"clickhouseAddress"       env:"DNSMONSTER_CLICKHOUSEADDRESS"       default:"localhost:9000"                       description:"Address of the clickhouse instance to save the results in"`
-	ClickhouseDatabase      string         `long:"clickhouseDatabase"      env:"DNSMONSTER_CLICKHOUSEDATABASE"      default:"localhost:9000"                       description:"clickhouse database to use"`
+	ClickhouseDatabase      string         `long:"clickhouseDatabase"      env:"DNSMONSTER_CLICKHOUSEDATABASE"      default:"default"                              description:"clickhouse database to use"`
 	ClickhouseUsername      string         `long:"clickhouseUsername"      env:"DNSMONSTER_CLICKHOUSEUSERNAME"      default:"default"                              description:"Username to use for connecting to the clickhouse instance"`
 	ClickhousePassword      string         `long:"clickhousePassword"      env:"DNSMONSTER_CLICKHOUSEPASSWORD"      default:""                                     description:"Password to use for connecting to the clickhouse instance"`
 	ClickhouseDelay         time.Duration  `long:"clickhouseDelay"         env:"DNSMONSTER_CLICKHOUSEDELAY"         default:"1s"                                   description:"Interval between sending results to ClickHouse"`
